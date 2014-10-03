@@ -1,0 +1,32 @@
+#include <iostream>
+#include<ctime>
+
+using namespace std;
+
+int fib(int n)
+{
+	if (n==1 || n==2)
+	{
+		return 1;
+	}
+	else 
+		return fib(n-1)+fib(n-2);
+}
+
+
+int main()
+{
+	srand(time(0));
+	clock_t t1, t2;
+
+	int erika;
+	t1=clock();
+	erika=fib(41);
+	t2=clock();
+	float diff((float)t2-(float)t1);
+	cout<<diff<<endl;
+	cout<<erika;
+	
+	system("pause");
+	return 0;
+}
